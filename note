@@ -7,3 +7,56 @@ Todo
 -Project: Building the checkout and Order APIs
 -Payment Processing with Stripe
 -Deployment
+
+    Spring MVC(MODEL VIEW CONTROLLER)
+This is a framework within the spring eco system, that is designed for building web application.
+-How the web works
+When you open a website in your browser
+Your computer called the "client"
+sends a request to another computer called the "server"
+the "server" sends back a response which the browser displays as a webpage.
+This communication happens using a protocol called "HTTP"(Hypertext transfer protocol).
+Http: This is a set of rules that computers follow to send and receive data over the internet.
+Meaning: everytime i visit a website,
+the browser sends an http request to fetch the page
+the server processes the request and sends back an http response with the content of the page.
+    HTTP REQUEST contains the following
+-method: GET, POST etc
+-url: The address of the resource you are requesting
+-Headers: User-Agent, Authentication
+-Body(Optional): send data to the server eg when you submit a form.
+    HTTP response contains the following
+-Status: 200(Ok), 404(Not Found)
+-Headers: that includes meta data about the response eg Content-Type Json
+-Body: web page, data
+    HTML(HyperText Markup Language)
+This defines the structure of a web page.
+There are two ways a webpage can be generated and sent to the user.
+1)The server generates the entire web page before sending it to the browser
+This is called Server Side Rendering (SSR)
+2)The server sends the raw data and the client (browser) generates the page itself.
+This is called Client side rendering (CSR)
+    JSON(JavaScript Object Notation)
+The server can also send data to the client as JSON
+The client takes the data and dynamically creates the web page
+we use React, Angular, View to take care of page rendering.
+    APIs(Application Programming Interface)
+This type of interaction where the server provides raw data
+instead of a full page is made possible through something called an APIs.
+API: Ths is a way for applications to communicate with eachother
+ie: The backend(server) exposes an API and the frontend like REACT consumes the API to render web pages.
+APIs are not only for frontend applications.
+    Spring boot
+With spring boot we can build two types of backends(server) that is SSR or CSR.
+
+-Spring Mvc: This is  a framework for building web apps
+It gives us all the tools to handle HTTP requests, Generate web pages, return data to clients.
+It is part of the spring eco system and spring boot makes it easy to use.
+It is a popular design pattern for organizing our code.
+Model: This handles the Data and business logic
+View: This is what the user sees eg html page
+Controller: This is the middle man, it takes a request, processes it and sends a response.
+When we annotate a class with a @Controller annotation, we are making the class a bean
+Meaning : So when the application starts, spring creates an instance of the class and manages it.
+-Build traditinal web apps
+-Buld modern apis
