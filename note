@@ -58,5 +58,38 @@ View: This is what the user sees eg html page
 Controller: This is the middle man, it takes a request, processes it and sends a response.
 When we annotate a class with a @Controller annotation, we are making the class a bean
 Meaning : So when the application starts, spring creates an instance of the class and manages it.
--Build traditinal web apps
--Buld modern apis
+
+@Controller: This annotation is used to define the controller
+Java creates a bean because of the annotation
+bean: This is an object that spring creates and manages for you.
+
+    View templates
+Template engine: A tool that allows to create dynamic web pages by embedding variables and logic inside HTML files.
+    Types of template engines
+-JSP(JavaServer Pages)
+-Freemaker
+-Mustache
+-Thymeleaf
+Thymeleaf: This has some attributes that enhances html
+With these attributes you can render content dynamically.
+    Passing Data To Views
+We can pass data from our controller to view using model
+
+-Build modern apis
+    REST-Representational State Transfer
+A set of rules that define how applications should communicate over HTTP.
+Api: is an interface that allow application to talk to eachother.
+RESTful APIs: is an API that follow a certain rule.
+@RestController: We use this annotation when building an api.
+spring automatically converts our java objects to json object.
+With apis other applications can consume our data and use them however they want.
+
+    Todo
+-Create my first RESTful API
+-Testing APIs with postman
+-Handling dynamic routes
+-Setting HTTP status codes
+-Using DTOS (Data Transfer Objects)
+-Extracting query parameters, request headers/ body
+-Performing CRUD operations
+-Handling action-based updates
