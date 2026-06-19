@@ -93,3 +93,14 @@ With apis other applications can consume our data and use them however they want
 -Extracting query parameters, request headers/ body
 -Performing CRUD operations
 -Handling action-based updates
+
+    Testing APIs with postman
+Postman is designed for testing and interacting with apis
+    Handling dynamic routes
+Whatever numbers you pass in the url, spring automatically converts it to a long.
+    Setting HTTP status codes
+If a resource cannot be found, we set the status to 404
+    ResponseEntity
+With ResponseEntity, we can customize our response.
+    Using DTOS (Data Transfer Objects)
+A DTO is a simple Java object used to transfer data between different layers of an application.
