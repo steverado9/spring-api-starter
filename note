@@ -104,3 +104,42 @@ If a resource cannot be found, we set the status to 404
 With ResponseEntity, we can customize our response.
     Using DTOS (Data Transfer Objects)
 A DTO is a simple Java object used to transfer data between different layers of an application.
+You can convert a lambda to a method reference using mapStruct
+    mapstruct
+Automatically creates an implementation in the target/generated-sources/annotations for our UerMapper interface.
+-manual lambda method: map(user -> new UserDto(user.getId(), user.getName(), user.getEmail()))
+-lambda: map(user -> userMapper.toDto(user))
+-method reference: map(userMapper::toDto)
+    Customizing response data
+serialization: Is a way of converting a java object into a Json representation
+Deserialization: converting json into java object.
+    we have few annotations to control how java objects are serialized to json
+-@JsonIgnore: for excluding feeds
+-@JsonProperty: for renaming them
+-@Jsonnclude: for excluding null or empty feeds
+-@Jsonformat: for formating date,time and numbers
+    Extracting query parameters
+query parameters: These are key value pairs that are added to a url.
+They are used for filtering, sorting, pagination they are used to provide input to our apis.
+In Postman, we have our params section
+JpaRepository: This interface also provides sorting and pagination.
+When working with query parameter always set the name of the parameter inside the request parameter in the controller
+@EntityGraph: Used for performing a single query that requires two tables.
+    Extracting request headers
+headers just like query parameters are key value pairs
+we prefix custom headers with "x-auth-token"
+To capture this in our controller, we use @RequestHeader annotation
+    Extracting request body
+With this we can send the actual data or content to our backend
+It is often used for creating or updating an object
+we use @RequestBody annotation and we perform a POST request
+    Updating resources
+To update resources, we use a PUT or PATCH request
+    Deleting resources
+We first change the request method to Delete
+    Action based updates
+-We use PUT/PATCH for updating resources
+-Some updates represent an "action"
+-Examples: changing password, submit approval request
+-Better to use a POST request
+-Because we Create a request to perform an action
